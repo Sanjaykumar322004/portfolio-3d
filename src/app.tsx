@@ -15,6 +15,8 @@ import Footer from "./components/footer";
 import Education from "./components/education";
 
 
+
+
 // App
 const App = () => {
   const [hide, setHide] = useState(true);
@@ -30,7 +32,9 @@ const App = () => {
         <About />
         <Experience />
          <Education />
+         
         <Tech />
+         
         
         <Works />
         

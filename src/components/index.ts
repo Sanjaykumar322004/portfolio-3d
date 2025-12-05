@@ -13,6 +13,8 @@ import { Experience } from "./experience";
 import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { Tech } from "./tech";
+
+
 import { Works } from "./works";
 
 export {
@@ -28,3 +30,5 @@ export {
   Tech,
   Works,
 };
+export { default as Resume } from "./resume";
+

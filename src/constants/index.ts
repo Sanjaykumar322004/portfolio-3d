@@ -52,6 +52,11 @@ export const NAV_LINKS = [
     title: "Work",
     link: null,
   },
+   {
+  id: "resume",
+  title: "Resume",
+  link: "https://drive.google.com/file/d/1gh97Rh3ShK8AQ90kh5Mh0JG6B5wKI_-q/view", 
+},
   {
     id: "contact",
     title: "Contact",
@@ -62,6 +67,9 @@ export const NAV_LINKS = [
     title: "Source Code",
     link: "https://github.com/Sanjaykumar322004",
   },
+
+ 
+
 ] as const;
   
 // Services

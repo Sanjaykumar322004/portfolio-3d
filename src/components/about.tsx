@@ -1,4 +1,4 @@
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { SERVICES } from "../constants";
@@ -16,11 +16,12 @@ type ServiceCardProps = {
 const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
   return (
     <Tilt
-      options={{
-        max: 45,
-        scale: 1,
-        speed: 450,
-      }}
+      tiltMaxAngleX={12}
+      tiltMaxAngleY={12}
+      perspective={1000}
+      transitionSpeed={450}
+      scale={1}
+      gyroscope={true}
       className="xs:w-[250px] w-full"
     >
       <motion.div
@@ -54,16 +55,19 @@ export const About = () => {
           variants={fadeIn(undefined, undefined, 0.1, 1)}
           className="empty-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-      I'm a passionate and results-oriented Java Full Stack Developer with a knack for building robust, user-friendly web applications and a growing interest in creating immersive 3D experiences. I possess a strong foundation in backend technologies (Core Java, Advanced Java, Spring Boot, Hibernate) and frontend development, complemented by database management skills (MySQL). My goal is to leverage cutting-edge technologies to build engaging and performant digital solutions.
+          I'm a passionate and results-oriented Java Full Stack Developer with a
+          knack for building robust, user-friendly web applications and a
+          growing interest in creating immersive 3D experiences. I possess a
+          strong foundation in backend technologies (Core Java, Advanced Java,
+          Spring Boot, Hibernate) and frontend development, complemented by
+          database management skills (MySQL). My goal is to leverage cutting-
+          edge technologies to build engaging and performant digital solutions.
         </motion.p>
 
-
-        
-{/* Dream Roles Title */}
+        {/* Dream Roles Title */}
         <motion.div variants={textVariant()}>
- <h2 className={`${styles.sectionHeadText} mt-12`}>My Dream Roles.</h2>
-</motion.div>
-
+          <h2 className={`${styles.sectionHeadText} mt-12`}>My Dream Roles.</h2>
+        </motion.div>
 
         {/* Service Card */}
         <div className="mt-20 flex flex-wrap gap-10">
@@ -75,3 +79,5 @@ export const About = () => {
     </SectionWrapper>
   );
 };
+
+export default About;
